@@ -1,7 +1,13 @@
 *
 
 !.gitignore
+
+# nvim
 !nvim/
 !nvim/**
 nvim/.luarc.json
 nvim/lazy-lock.json
+
+# tmux
+!tmux
+!tmux/**
