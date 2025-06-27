@@ -4,6 +4,11 @@
     "title",
     "separator",
     "os",
+    {
+      "type": "command",
+      "key": "OS Age",
+      "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days"
+    },
     "host",
     "kernel",
     "uptime",
