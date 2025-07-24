@@ -29,6 +29,7 @@ require("telescope").setup({
 	},
 })
 require("lsp_lines").setup()
+require("mini.files").setup({})
 
 vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
 
@@ -39,6 +40,7 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find f
 vim.keymap.set("n", "<leader>h", function()
 	vim.lsp.buf.hover()
 end, { desc = "Show lsp hover info" })
+vim.keymap.set("n", "<leader>e", MiniFiles.open)
 
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
@@ -47,4 +49,3 @@ vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("v", "<leader>ca", vim.lsp.buf.code_action)
-
