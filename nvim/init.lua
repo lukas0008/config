@@ -18,7 +18,6 @@ vim.lsp.inlay_hint.enable(true)
 
 require("config.lazy")
 
-vim.lsp.enable("clangd")
 -- plugin setups
 require("mason").setup()
 require("telescope").setup({
@@ -32,17 +31,15 @@ require("telescope").setup({
 })
 require("lsp_lines").setup()
 require("mini.files").setup({})
+require("harpoon").setup({})
 
 require("lspconfig").clangd.setup({})
-
-vim.lsp.config("clangd", {
-	-- Optional: Add server-specific settings here
-})
-vim.lsp.enable("clangd")
 
 vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
 
 vim.cmd("colorscheme tokyonight-night")
+-- vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme unokai")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
@@ -58,3 +55,4 @@ vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("v", "<leader>ca", vim.lsp.buf.code_action)
+vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
