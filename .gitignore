@@ -11,6 +11,8 @@ nvim/lazy-lock.json
 # hyprland
 !hypr/
 !hypr/**
+!waybar/
+!waybar/**
 
 # tmux
 !tmux
