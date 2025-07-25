@@ -8,6 +8,10 @@
 nvim/.luarc.json
 nvim/lazy-lock.json
 
+# hyprland
+!hypr/
+!hypr/**
+
 # tmux
 !tmux
 !tmux/**
