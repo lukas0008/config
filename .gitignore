@@ -19,6 +19,7 @@ nvim/lazy-lock.json
 # nix
 !nixos/
 !nixos/**
+nixos/hardware-configuration.nix
 
 # tmux
 !tmux

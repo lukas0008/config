@@ -145,7 +145,7 @@
     unzip
     nodejs_24
     gnumake
-    python314
+    python313
     killall
     fastfetch
     btop
@@ -159,6 +159,9 @@
     clang
     clang-tools
     nixd
+    swayosd
+    legcord
+    cowsay
     (pkgs.catppuccin-sddm.override {
       flavor = "mocha";
       font  = "Noto Sans";
