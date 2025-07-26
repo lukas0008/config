@@ -162,6 +162,7 @@
     swayosd
     legcord
     cowsay
+    imagemagick
     (pkgs.catppuccin-sddm.override {
       flavor = "mocha";
       font  = "Noto Sans";
