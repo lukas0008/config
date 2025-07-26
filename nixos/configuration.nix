@@ -109,6 +109,7 @@
     XCURSOR_THEME = "breeze_cursors"; # optional
     QT_QPA_PLATFORMTHEME = "qt5ct"; # or qt6ct
     QT_STYLE_OVERRIDE = "Breeze";
+    OPENSSL_DIR = "${pkgs.openssl.dev}";
   };
 
 
@@ -163,6 +164,9 @@
     legcord
     cowsay
     imagemagick
+    hyprshot
+    openssl
+    hyprswitch
     (pkgs.catppuccin-sddm.override {
       flavor = "mocha";
       font  = "Noto Sans";
