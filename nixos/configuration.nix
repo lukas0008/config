@@ -25,6 +25,10 @@
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
+  hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -44,8 +48,9 @@
   services.displayManager.sddm = {
     enable = true;
     theme = "catppuccin-mocha";
-    package = pkgs.kdePackages.sddm;
+    # package = pkgs.kdePackages.sddm;
   };
+  services.desktopManager.plasma6.enable = true;
   services.flatpak.enable = true;
 
   
@@ -85,7 +90,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lukas = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "input" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
       rose-pine-cursor
@@ -102,13 +107,14 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
+  programs.gamescope.enable = true;
   nixpkgs.config.allowUnfree = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.variables = {
-    GTK_THEME = "Breeze-Dark";
+    # GTK_THEME = "Breeze-Dark";
     XCURSOR_THEME = "breeze_cursors"; # optional
-    QT_QPA_PLATFORMTHEME = "qt5ct"; # or qt6ct
-    QT_STYLE_OVERRIDE = "Breeze";
+    # QT_QPA_PLATFORMTHEME = "qt5ct"; # or qt6ct
+    # QT_STYLE_OVERRIDE = "Breeze-Dark";
     OPENSSL_DIR = "${pkgs.openssl.dev}";
   };
 
@@ -131,9 +137,6 @@
     hyprlock
     kdePackages.qtsvg
     kdePackages.dolphin
-    kdePackages.breeze-gtk
-    kdePackages.breeze-icons
-    kdePackages.breeze
     kdePackages.systemsettings
     kdePackages.kde-gtk-config     # GTK theme bridge for KDE apps
     kdePackages.plasma-integration
@@ -166,7 +169,21 @@
     imagemagick
     hyprshot
     openssl
-    hyprswitch
+    gtk4
+    gtk4-layer-shell
+    hyprshell
+    swayidle
+    atlauncher
+    localsend
+    llvm
+    zed-editor
+    ncdu
+    wl-clipboard
+    vulkan-loader
+    vulkan-tools
+    mesa
+    libdecor
+    amdvlk
     (pkgs.catppuccin-sddm.override {
       flavor = "mocha";
       font  = "Noto Sans";
