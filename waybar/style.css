@@ -1,3 +1,8 @@
+#custom-network-icon {
+  font-family: "Font Awesome 6 Free";
+  padding-right: 10px;
+}
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -78,7 +83,6 @@ button:hover {
 #disk,
 #temperature,
 #backlight,
-#network,
 #pulseaudio,
 #wireplumber,
 #custom-media,
@@ -88,6 +92,9 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 10px;
+    color: #ffffff;
+}
+#network {
     color: #ffffff;
 }
 
@@ -257,8 +264,6 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;

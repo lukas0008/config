@@ -38,6 +38,14 @@ require("lspconfig").nixd.setup({})
 
 vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
 
+-- copilot
+vim.g.copilot_no_tab_map = true
+vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+
+-- theme
 vim.cmd("colorscheme tokyonight-night")
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme unokai")

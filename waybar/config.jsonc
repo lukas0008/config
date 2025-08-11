@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "keyboard-state", "pulseaudio", "battery", "network" ],
+    "modules-right": ["tray", "keyboard-state", "pulseaudio", "battery", "network", "custom/network-icon" ],
 	//"mode":"overlay",
     // Modules configuration
    "hyprland/workspaces": {
@@ -87,12 +87,16 @@
     },
     "network": {
       // "interface": "wlp2*", // (Optional) To force the use of this interface
-      "format-wifi": "{essid} ({signalStrength}%) ",
+      "format-wifi": "{essid} ({signalStrength}%)",
       "format-ethernet": "{ipaddr}/{cidr} ",
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": "Disconnected ⚠",
       "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "custom/network-icon": {
+      "format": "",
+      "on-click": "hyprctl dispatch exec '[float; move onscreen 100%-w-0 0; stayfocused]' nm-connection-editor"
     },
     "pulseaudio": {
       // "scroll-step": 1, // %, can be a float
