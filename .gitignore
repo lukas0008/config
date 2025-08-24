@@ -11,6 +11,8 @@ nvim/lazy-lock.json
 # hyprland
 !hypr/
 !hypr/**
+!hypr/local.conf
+!hypr/monitors.conf
 !waybar/
 !waybar/**
 !wofi/
