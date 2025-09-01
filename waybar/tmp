@@ -1,0 +1,14 @@
+[2025-08-24 15:16:40.273] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/config
+[2025-08-24 15:16:40.273] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/config.jsonc
+[2025-08-24 15:16:40.273] [debug] Try expanding: $HOME/.config/waybar/config
+[2025-08-24 15:16:40.273] [debug] Try expanding: $HOME/.config/waybar/config.jsonc
+[2025-08-24 15:16:40.273] [debug] Found config file: /home/lukas/.config/waybar/config.jsonc
+[2025-08-24 15:16:40.273] [info] Using configuration file /home/lukas/.config/waybar/config.jsonc
+[2025-08-24 15:16:40.275] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-08-24 15:16:40.275] [debug] Try expanding: $XDG_CONFIG_HOME/waybar/style.css
+[2025-08-24 15:16:40.275] [debug] Try expanding: $HOME/.config/waybar/style.css
+[2025-08-24 15:16:40.275] [debug] Found config file: /home/lukas/.config/waybar/style.css
+[2025-08-24 15:16:40.275] [info] Using CSS file /home/lukas/.config/waybar/style.css
+[2025-08-24 15:16:40.278] [debug] Output detection done: HDMI-A-1 (Philips Consumer Electronics Company PHL 278E9Q 0x00002716)
+[2025-08-24 15:16:40.278] [debug] Output detection done: DP-3 (AOC Q27G2WG4 0x0000CFBC)
+[2025-08-24 15:16:43.621] [info] Quitting.

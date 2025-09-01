@@ -17,6 +17,8 @@ nvim/lazy-lock.json
 !waybar/**
 !wofi/
 !wofi/**
+!tofi/
+!tofi/**
 !hyprshell/
 !hyprshell/**
 
