@@ -1,0 +1,149 @@
+/* ========== Global Styles ========== */
+
+* {
+  border: none;
+  border-radius: 8px;
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 14px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  color: #d8dee9;
+}
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.95); /* translucent background */
+  border-right: 2px solid rgba(100, 100, 120, 0.3);
+  transition: background 0.3s ease;
+}
+
+/* ========== Module Container Layout ========== */
+
+#workspaces,
+#clock,
+#tray,
+#keyboard-state,
+#pulseaudio,
+#battery,
+#network {
+  margin: 6px 8px;
+  padding: 6px 4px;
+}
+
+/* ========== Workspaces ========== */
+
+#workspaces {
+}
+
+#workspaces button {
+  background: transparent;
+  color: #7f849c;
+  padding: 6px;
+  margin: 3px 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #a6e3a1;
+}
+
+#workspaces button.focused {
+  background: #89b4fa;
+  color: #1e1e2e;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  background: #f38ba8;
+  color: #1e1e2e;
+  font-weight: bold;
+}
+
+/* ========== Clock ========== */
+
+#clock {
+  background: #89b4fa;
+  color: #1e1e2e;
+  font-weight: bold;
+}
+
+/* ========== System Modules ========== */
+
+#tray {
+  padding: 6px;
+}
+
+#pulseaudio,
+#battery,
+#network,
+#keyboard-state {
+  background: #3b4252;
+  padding: 6px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+}
+
+#pulseaudio {
+  background: #a6e3a1;
+  color: #1e1e2e;
+}
+#pulseaudio.muted {
+  background: #f38ba8;
+}
+
+#battery {
+  background: #fab387;
+  color: #1e1e2e;
+}
+#battery.warning {
+  background: #f9e2af;
+}
+#battery.critical {
+  background: #f38ba8;
+}
+
+#network {
+  background: #94e2d5;
+  color: #1e1e2e;
+}
+
+#keyboard-state {
+  background: #cba6f7;
+  color: #1e1e2e;
+}
+
+/* ========== Hover Effects ========== */
+
+#pulseaudio:hover,
+#battery:hover,
+#network:hover,
+#keyboard-state:hover,
+#clock:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ========== Tooltip ========== */
+
+tooltip {
+  background: #1e1e2e;
+  color: #d8dee9;
+  border-radius: 6px;
+  padding: 6px;
+  border: 1px solid #585b70;
+}
+
+/* ========== Tray Icons ========== */
+
+#tray > .tray-item {
+  padding: 4px;
+  margin: 4px 0;
+}
+
+/* ========== Module Alignment (Optional) ========== */
+
+/* Center all text/icons in the vertical bar */
+label {
+}
+

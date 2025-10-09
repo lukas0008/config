@@ -16,6 +16,14 @@ vim.opt.smartindent = true -- Enable smart indenting
 -- inline hints
 vim.lsp.inlay_hint.enable(true)
 
+vim.lsp.enable("jdtls")
+vim.lsp.config["asm-lsp"] = {
+	cmd = { "asm-lsp" },
+	filetypes = { "asm", "s", "S" },
+}
+vim.lsp.enable("asm-lsp")
+vim.lsp.enable("tinymist")
+vim.lsp.enable("zls")
 require("config.lazy")
 
 -- plugin setups
@@ -33,16 +41,16 @@ require("lsp_lines").setup()
 require("mini.files").setup({})
 require("harpoon").setup({})
 
-require("lspconfig").clangd.setup({})
-require("lspconfig").nixd.setup({})
+vim.lsp.enable("clangd")
+vim.lsp.enable("nixd")
 
 vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
 
 -- copilot
 vim.g.copilot_no_tab_map = true
-vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false
+vim.keymap.set("i", "<S-Tab>", 'copilot#Accept("\\<CR>")', {
+	expr = true,
+	replace_keycodes = false,
 })
 
 -- theme
@@ -64,4 +72,9 @@ vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("v", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.opt.foldmethod = "syntax"
+vim.opt.foldlevel = 99
 vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
+vim.keymap.set("n", "<C-w>t", "<c-w>s10<c-w>+<c-w>j:term<CR>i", { desc = "Open horizontal terminal" })
+vim.keymap.set("n", "<C-w>g", "<c-w>v<c-w>l:term<CR>i", { desc = "Open vertical terminal" })
