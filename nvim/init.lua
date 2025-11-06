@@ -1,11 +1,9 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
-
 -- space leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
 -- two spaces, not tabs
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2 -- Number of spaces to insert for indentation
@@ -43,6 +41,13 @@ require("harpoon").setup({})
 
 vim.lsp.enable("clangd")
 vim.lsp.enable("nixd")
+vim.lsp.config('expert', {
+  cmd = { 'expert' },
+  root_markers = { 'mix.exs', '.git' },
+  filetypes = { 'elixir', 'eelixir', 'heex' },
+})
+
+vim.lsp.enable 'expert'
 
 vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
 
@@ -52,6 +57,7 @@ vim.keymap.set("i", "<S-Tab>", 'copilot#Accept("\\<CR>")', {
 	expr = true,
 	replace_keycodes = false,
 })
+vim.cmd("Copilot disable") -- disable by default
 
 -- theme
 vim.cmd("colorscheme tokyonight-night")
@@ -78,3 +84,4 @@ vim.opt.foldlevel = 99
 vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 vim.keymap.set("n", "<C-w>t", "<c-w>s10<c-w>+<c-w>j:term<CR>i", { desc = "Open horizontal terminal" })
 vim.keymap.set("n", "<C-w>g", "<c-w>v<c-w>l:term<CR>i", { desc = "Open vertical terminal" })
+
