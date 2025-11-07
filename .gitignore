@@ -23,6 +23,8 @@ hypr/monitors.conf
 !hyprshell/**
 !niri/
 !niri/**
+!noctalia/
+!noctalia/**
 
 !wallpapers/
 !wallpapers/**
