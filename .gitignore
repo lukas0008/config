@@ -21,6 +21,11 @@ hypr/monitors.conf
 !tofi/**
 !hyprshell/
 !hyprshell/**
+!niri/
+!niri/**
+
+!wallpapers/
+!wallpapers/**
 
 !alacitty/
 !alacitty/**
