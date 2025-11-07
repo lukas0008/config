@@ -22,6 +22,9 @@ hypr/monitors.conf
 !hyprshell/
 !hyprshell/**
 
+!alacitty/
+!alacitty/**
+
 # nix
 !nixos/
 !nixos/**
