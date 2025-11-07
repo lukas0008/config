@@ -1,3 +1,4 @@
+$lockscreen = hyprlock
 $other_config = ~/.config/hypr/riced.conf
 $other_config_waybar = ~/.config/waybar/config-riced.jsonc
 $other_config_waybar_style = ~/.config/waybar/style-riced.css
