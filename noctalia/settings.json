@@ -98,7 +98,7 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "id": "Battery",
                     "warningThreshold": 30
                 },
@@ -334,6 +334,11 @@
             {
                 "directory": "/home/lukas/.config/wallpapers",
                 "name": "HDMI-A-1",
+                "wallpaper": "/home/lukas/.config/wallpapers/asciicat.png"
+            },
+            {
+                "directory": "/home/lukas/.config/wallpapers",
+                "name": "eDP-1",
                 "wallpaper": "/home/lukas/.config/wallpapers/asciicat.png"
             }
         ],
