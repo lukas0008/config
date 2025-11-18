@@ -6,15 +6,18 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 -- two spaces, not tabs
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2 -- Number of spaces to insert for indentation
-vim.opt.tabstop = 2 -- Number of visual spaces a tab occupies
-vim.opt.softtabstop = 2 -- Number of spaces for inserting/deleting tabs
+vim.opt.shiftwidth = 4 -- Number of spaces to insert for indentation
+vim.opt.tabstop = 4 -- Number of visual spaces a tab occupies
+vim.opt.softtabstop = 4 -- Number of spaces for inserting/deleting tabs
 vim.opt.smartindent = true -- Enable smart indenting
 
 -- inline hints
 vim.lsp.inlay_hint.enable(true)
 
+
 vim.lsp.enable("jdtls")
+-- vim.lsp.enable("checkstyle")
+
 vim.lsp.config["asm-lsp"] = {
 	cmd = { "asm-lsp" },
 	filetypes = { "asm", "s", "S" },
