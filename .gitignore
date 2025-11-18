@@ -38,9 +38,13 @@ local/hypr/monitors.conf
 nixos/hardware-configuration.nix
 
 # tmux
-!tmux
+!tmux/
 !tmux/**
 
 # fastfetch
-!fastfetch
+!fastfetch/
 !fastfetch/**
+
+# dotfile utils
+!dotstuff/
+!dotstuff/**
