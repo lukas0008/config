@@ -17,7 +17,7 @@
         "preferredPlayer": "",
         "visualizerQuality": "high",
         "visualizerType": "linear",
-        "volumeOverdrive": false,
+        "volumeOverdrive": true,
         "volumeStep": 5
     },
     "bar": {
@@ -105,7 +105,7 @@
                     "warningThreshold": 30
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "id": "Volume"
                 },
                 {
@@ -373,7 +373,7 @@
             {
                 "directory": "/home/lukas/.config/wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/lukas/.config/wallpapers/asciicat.png"
+                "wallpaper": "/home/lukas/.config/wallpapers/fancycat.png"
             }
         ],
         "overviewEnabled": true,
