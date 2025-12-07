@@ -15,7 +15,9 @@ cowsay
 legcord-bin
 steam
 gh
-unzip"
-echo "Installing\n$packages"
-
+unzip
+xfce-polkit"
+packages="$(echo $packages | tr '\n' ' ')"
+echo "Installing:
+$packages"
 donice "yay -S --needed --noconfirm $packages"

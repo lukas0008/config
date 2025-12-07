@@ -15,7 +15,6 @@ vim.opt.smartindent = true -- Enable smart indenting
 vim.lsp.inlay_hint.enable(true)
 
 
-vim.lsp.enable("jdtls")
 -- vim.lsp.enable("checkstyle")
 
 vim.lsp.config["asm-lsp"] = {
@@ -25,6 +24,7 @@ vim.lsp.config["asm-lsp"] = {
 vim.lsp.enable("asm-lsp")
 vim.lsp.enable("tinymist")
 vim.lsp.enable("zls")
+vim.lsp.enable("jdtls")
 require("config.lazy")
 
 -- plugin setups
@@ -49,6 +49,8 @@ vim.lsp.config('expert', {
   root_markers = { 'mix.exs', '.git' },
   filetypes = { 'elixir', 'eelixir', 'heex' },
 })
+vim.lsp.config("omnisharp", {})
+vim.lsp.enable("omnisharp")
 
 vim.lsp.enable 'expert'
 

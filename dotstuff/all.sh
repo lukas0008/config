@@ -5,6 +5,8 @@ donice ()
   echo "+$1"
   eval "$1"
 }
+end_todolist="
+You have to do the following to finish the setup:"
 
 read -p "
 Select action:
@@ -28,3 +30,5 @@ case "$ans" in
   4) . ./git.sh;;
 *) echo "That choice dont work";;
 esac
+
+echo "$end_todolist"
