@@ -29,8 +29,8 @@ local/hypr/monitors.conf
 !wallpapers/
 !wallpapers/**
 
-!alacitty/
-!alacitty/**
+!alacritty/
+!alacritty/**
 
 # nix
 !nixos/

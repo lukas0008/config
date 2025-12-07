@@ -6,6 +6,7 @@ ncdu
 neovim
 wget
 alacritty
+alacritty-themes
 rofi
 noctalia-shell
 clang
