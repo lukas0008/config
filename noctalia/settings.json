@@ -31,7 +31,7 @@
         "volumeStep": 5
     },
     "bar": {
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.93,
         "capsuleOpacity": 1,
         "density": "comfortable",
         "exclusive": true,
@@ -62,9 +62,7 @@
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "index",
-                    "occupiedColor": "secondary",
                     "showApplications": false,
-                    "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
                 }
@@ -121,6 +119,18 @@
                     "showVisualizer": false,
                     "useFixedWidth": false,
                     "visualizerType": "linear"
+                },
+                {
+                    "defaultSettings": {
+                        "autoStartBreaks": false,
+                        "autoStartWork": false,
+                        "compactMode": false,
+                        "longBreakDuration": 15,
+                        "sessionsBeforeLongBreak": 4,
+                        "shortBreakDuration": 5,
+                        "workDuration": 25
+                    },
+                    "id": "plugin:pomodoro"
                 }
             ],
             "right": [
@@ -168,6 +178,27 @@
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false,
                     "usePrimaryColor": true
+                },
+                {
+                    "defaultSettings": {
+                        "currentIconName": "world-download",
+                        "hideOnZero": false,
+                        "updateIntervalMinutes": 30,
+                        "updateTerminalCommand": "foot -e"
+                    },
+                    "id": "plugin:update-count"
+                },
+                {
+                    "defaultSettings": {
+                        "autoStartBreaks": false,
+                        "autoStartWork": false,
+                        "compactMode": false,
+                        "longBreakDuration": 15,
+                        "sessionsBeforeLongBreak": 4,
+                        "shortBreakDuration": 5,
+                        "workDuration": 25
+                    },
+                    "id": "plugin:pomodoro"
                 }
             ]
         }
@@ -228,6 +259,10 @@
             {
                 "enabled": true,
                 "id": "media-sysmon-card"
+            },
+            {
+                "enabled": false,
+                "id": "brightness-card"
             }
         ],
         "diskPath": "/",
@@ -264,6 +299,14 @@
         "enabled": false,
         "gridSnap": false,
         "monitorWidgets": [
+<<<<<<< Updated upstream
+=======
+            {
+                "name": "eDP-1",
+                "widgets": [
+                ]
+            }
+>>>>>>> Stashed changes
         ]
     },
     "dock": {
@@ -505,7 +548,11 @@
         "solidColor": "#1a1a2e",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.81,
+<<<<<<< Updated upstream
         "transitionType": "fade",
+=======
+        "transitionType": "random",
+>>>>>>> Stashed changes
         "useSolidColor": false,
         "useWallhaven": false,
         "viewMode": "single",

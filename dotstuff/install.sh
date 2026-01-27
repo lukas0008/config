@@ -17,7 +17,10 @@ legcord-bin
 steam
 gh
 unzip
-xfce-polkit"
+xfce-polkit
+kitty
+hyprpicker
+hyprland"
 packages="$(echo $packages | tr '\n' ' ')"
 echo "Installing:
 $packages"

@@ -25,6 +25,7 @@ vim.lsp.enable("asm-lsp")
 vim.lsp.enable("tinymist")
 vim.lsp.enable("zls")
 vim.lsp.enable("jdtls")
+
 require("config.lazy")
 
 -- plugin setups
@@ -41,6 +42,7 @@ require("telescope").setup({
 require("lsp_lines").setup()
 require("mini.files").setup({})
 require("harpoon").setup({})
+-- require("typescript-language-server").setup()
 
 vim.lsp.enable("clangd")
 vim.lsp.enable("nixd")
@@ -51,6 +53,19 @@ vim.lsp.config('expert', {
 })
 vim.lsp.config("omnisharp", {})
 vim.lsp.enable("omnisharp")
+vim.lsp.config["tsserver"] = {
+    cmd = { "typescript-language-server", "--stdio" },
+    filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
+  --   root_dir = function(fname)
+  --       return vim.fs.dirname(
+		-- 	vim.fs.find(
+		-- 		{ "tsconfig.json", "package.json", ".git" },
+		-- 		{ upward = true, path = fname }
+		-- 	)[1]
+		-- )
+  --   end,
+}
+vim.lsp.enable("tsserver")
 
 vim.lsp.enable 'expert'
 
@@ -75,6 +90,9 @@ vim.keymap.set("n", "<leader>h", function()
 	vim.lsp.buf.hover()
 end, { desc = "Show lsp hover info" })
 vim.keymap.set("n", "<leader>e", MiniFiles.open)
+vim.keymap.set("n", "<leader>c", function()
+    vim.cmd("let @+ = @")
+end, { desc = "Copy from default register to clipboard register" })
 
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
