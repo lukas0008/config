@@ -25,6 +25,8 @@ local/hypr/monitors.conf
 !niri/**
 # !noctalia/
 # !noctalia/**
+!kitty/
+!kitty/**
 
 !wallpapers/
 !wallpapers/**
