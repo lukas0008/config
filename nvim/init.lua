@@ -26,6 +26,7 @@ vim.lsp.config["asm-lsp"] = {
 vim.lsp.enable("asm-lsp")
 vim.lsp.enable("tinymist")
 vim.lsp.enable("zls")
+vim.lsp.config('zls', {})
 vim.lsp.enable("jdtls")
 vim.filetype.add {
   extension = {
@@ -71,6 +72,7 @@ vim.lsp.config('expert', {
   root_markers = { 'mix.exs', '.git' },
   filetypes = { 'elixir', 'eelixir', 'heex' },
 })
+vim.lsp.enable("ols")
 vim.lsp.config("omnisharp", {})
 vim.lsp.enable("omnisharp")
 vim.lsp.config["tsserver"] = {

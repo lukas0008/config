@@ -29,6 +29,7 @@ local/hypr/monitors.conf
 !kitty/**
 !nushell/
 !nushell/**
+nushell/history.txt
 
 !wallpapers/
 !wallpapers/**

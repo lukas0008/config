@@ -25,3 +25,5 @@ source ~/.zoxide.nu
 $env.PNPM_HOME = "/home/lukas/.local/share/pnpm"
 $env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
 # pnpm end
+
+$env.PATH = ($env.PATH | append "/home/lukas/.cargo/bin")
