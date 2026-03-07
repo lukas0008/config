@@ -20,3 +20,8 @@
 zoxide init nushell | save -f ~/.zoxide.nu
 
 source ~/.zoxide.nu
+
+# pnpm
+$env.PNPM_HOME = "/home/lukas/.local/share/pnpm"
+$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
+# pnpm end

@@ -1,3 +1,4 @@
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
@@ -21,10 +22,29 @@ vim.lsp.config["asm-lsp"] = {
 	cmd = { "asm-lsp" },
 	filetypes = { "asm", "s", "S" },
 }
+
 vim.lsp.enable("asm-lsp")
 vim.lsp.enable("tinymist")
 vim.lsp.enable("zls")
 vim.lsp.enable("jdtls")
+vim.filetype.add {
+  extension = {
+    nu = "nu"
+  }
+}
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+    pattern = "*.nu",
+    callback = function()
+        vim.bo.filetype = "nu"
+    end
+})
+vim.lsp.enable('nushell')
+vim.lsp["tinymist"] = {
+    cmd = { "tinymist" },
+    filetypes = { "typst" },
+    settings = {}
+}
+vim.lsp.enable("tinymist")
 
 require("config.lazy")
 
