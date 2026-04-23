@@ -18,11 +18,16 @@ vim.lsp.inlay_hint.enable(true)
 
 -- vim.lsp.enable("checkstyle")
 
-vim.lsp.config["asm-lsp"] = {
-  cmd = { "asm-lsp" },
-  filetypes = { "asm", "s", "S" },
-}
-  
+vim.lsp.config("asm-lsp", {
+    cmd = { "asm-lsp" },
+    filetypes = { "asm", "s", "S" },
+    root_dir = vim.fn.getcwd() 
+    -- function(fname)
+    --   local lsputil = require('lspconfig.util')
+    --   -- local root = lsputil.find_git_ancestor(vim.fn.getcwd())
+    --   return vim.fn.getcwd()
+    -- end
+})
 vim.lsp.enable("asm-lsp")
 vim.lsp.enable("tinymist")
 vim.lsp.enable("zls")

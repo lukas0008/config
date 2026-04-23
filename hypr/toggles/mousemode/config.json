@@ -1,0 +1,10 @@
+[
+  { "label": "Right", "command": "movefocus r" },
+  { "label": "Thunar", "command": "exec thunar" },
+  { "label": "Kill", "command": "killactive" },
+  { "label": "Fullscreen", "command": "fullscreen" },
+  { "label": "Left", "command": "movefocus l" },
+  { "label": "Rofi", "command": "exec rofi -show drun" },
+  { "label": "Rofi2", "command": "exec rofi -show drun" },
+  { "label": "Rofi3", "command": "exec rofi -show drun" }
+]
