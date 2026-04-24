@@ -25,6 +25,7 @@ alias py = cd ~/code/py
 alias web = cd ~/code/web
 alias nv = nvim
 alias proton = `~/.local/share/Steam/steamapps/common/Proton - Experimental/proton`
+alias clanker = opencode
 
 $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
